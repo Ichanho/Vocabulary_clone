@@ -1,8 +1,17 @@
 {
   "days": [
-    { "id": 1, "day": 1 },
-    { "id": 2, "day": 2 },
-    { "id": 3, "day": 3 }
+    {
+      "id": 1,
+      "day": 1
+    },
+    {
+      "id": 2,
+      "day": 2
+    },
+    {
+      "id": 3,
+      "day": 3
+    }
   ],
   "words": [
     {
@@ -38,7 +47,7 @@
       "day": 3,
       "eng": "school",
       "kor": "학교",
-      "isDone": false
+      "isDone": true
     },
     {
       "id": 6,

@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import useFetch from "../Hooks/useFetch"
 
 interface Iday {
-  id: number,
-  day: number
+  id: number;
+  day: number;
 }
 
 function Daylist() {
