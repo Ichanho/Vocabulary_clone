@@ -30,7 +30,7 @@ function Word({ word: w }: Iporps) {
       if(res.ok){
         setIsDone(!isDone);
       }
-    })
+    });
   }
 
   function toggleShow() {
@@ -39,14 +39,14 @@ function Word({ word: w }: Iporps) {
 
   function del() {
     if(window.confirm("정말 삭제하시겠습니까?")){
-      fetch(`http://localhost3001/word/${word.id}`,{
+      fetch(`http://localhost:3001/words/${word.id}`,{
         method: "DELETE",
       }).then((res)=>{
         if(res.ok){
           setWord({
             ...word,
             id: 0,
-          })
+          });
         }
       })
     }
