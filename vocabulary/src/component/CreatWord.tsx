@@ -1,18 +1,19 @@
-import { useRef, SyntheticEvent } from "react";
-import {useNavigate} from "react-router-dom"
+import { useRef, SyntheticEvent, useState } from "react";
+import { useNavigate } from "react-router-dom"
 import useFetch from "../Hooks/useFetch";
 import { Iday } from "./Daylist"
 import { Iword } from "./Word"
 
 
 function CreatWord() {
+  const [isLoading, setIsLoading] = useState(false);
   const days: Iday[] = useFetch(`http://localhost:3001/days`);
   const navigate = useNavigate();
 
   function handleWord(event: SyntheticEvent) {
     event.preventDefault();
 
-    if (dayRef.current && engRef.current && korRef.current){
+    if (!isLoading && dayRef.current && engRef.current && korRef.current) {
       const day = dayRef.current.value;
       const eng = engRef.current.value;
       const kor = korRef.current.value;
@@ -29,8 +30,8 @@ function CreatWord() {
           isDone: false,
         }
         )
-      }).then((res)=>{
-        if(res.ok){
+      }).then((res) => {
+        if (res.ok) {
           alert("생성이 완료 되었습니다.");
           navigate(`/day/${day}`);
         }
@@ -57,7 +58,7 @@ function CreatWord() {
         {days.map((day) => { return <option key={day.id} value={day.day}>{day.day}</option> })}
       </select>
     </div>
-    <button>저장</button>
+    <button style={{ opacity: isLoading ? 0.3 : 1 }}>{isLoading ? "Saving...." : "저장"}</button>
   </form>
 }
 
