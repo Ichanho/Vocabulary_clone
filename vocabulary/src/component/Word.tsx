@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "./Word.module.css"
 
 interface Iporps {
   word: Iword;
@@ -56,13 +57,13 @@ function Word({ word: w }: Iporps) {
     return null;
   }
 
-  return <tr>
-    <td><input type="checkbox" checked={isDone} onChange={toggleDone} /></td>
+  return <tr className={isDone ? styles.off : ""}>
+    <td className={styles.check_box}><input type="checkbox" checked={isDone} onChange={toggleDone} /></td>
     <td>{word.eng}</td>
     <td>{isShow === true ? word.kor : ''}</td>
     <td>
-      <button onClick={toggleShow}>뜻 보기</button>
-      <button onClick={del}>삭제</button>
+      <button onClick={toggleShow} className={styles.show_btn}>뜻 보기</button>
+      <button onClick={del} className={styles.del_btn}>삭제</button>
     </td>
   </tr>
 }

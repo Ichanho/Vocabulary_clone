@@ -5,10 +5,11 @@ import Day from "./component/Day";
 import Empty from "./component/Empty";
 import CreatDay from "./component/CreatDay";
 import CreatWord from "./component/CreatWord";
+import styles from "./App.module.css"
 
 function App() {
   return (
-    <div className="App">
+    <div className={styles.app}>
       <BrowserRouter>
       <Header />
       <Routes>

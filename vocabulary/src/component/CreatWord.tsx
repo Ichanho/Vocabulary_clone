@@ -2,7 +2,7 @@ import { useRef, SyntheticEvent, useState } from "react";
 import { useNavigate } from "react-router-dom"
 import useFetch from "../Hooks/useFetch";
 import { Iday } from "./Daylist"
-import { Iword } from "./Word"
+import styles from "./CreatWord.module.css"
 
 
 function CreatWord() {
@@ -43,7 +43,7 @@ function CreatWord() {
   const korRef = useRef<HTMLInputElement>(null);
   const dayRef = useRef<HTMLSelectElement>(null);
 
-  return <form onSubmit={handleWord}>
+  return <form onSubmit={handleWord} className={styles.input_area}>
     <div>
       <label>Eng</label>
       <input type="text" placeholder="Ex) happy" ref={engRef} />

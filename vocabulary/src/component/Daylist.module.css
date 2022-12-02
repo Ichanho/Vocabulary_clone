@@ -1,0 +1,20 @@
+.day_list{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.day_list li{
+  flex: 20% 0 0;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.day_list a{
+  display: block;
+  padding: 20px 0;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  background-color: dodgerblue;
+}

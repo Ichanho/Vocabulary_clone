@@ -1,6 +1,8 @@
-import Daylist, {Iday} from "./Daylist"
+import {Iday} from "./Daylist"
 import {useNavigate} from "react-router-dom"
 import useFetch from "../Hooks/useFetch";
+import styles from "./CreatDay.module.css"
+
 
 function CreatDay(){
   const days:Iday[] = useFetch(`http://localhost:3001/days`);

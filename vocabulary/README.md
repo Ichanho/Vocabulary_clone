@@ -1,4 +1,9 @@
-# Getting Started with Create React App
+# TypeScript 공부를 위한 프로젝트
+## 목표
+* 일자와 단어를 추가/삭제 가능하며 DB를 이용
+* JSON-Server 를 이용하여 간단한 REST-API 이용
+* TypeScript가 React에서 어떻게 사용되는지 응용
+<!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -43,4 +48,4 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To learn React, check out the [React documentation](https://reactjs.org/). -->
